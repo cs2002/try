@@ -1,5 +1,7 @@
 # 告诉 Travis CI 应该用已经安装了 Scala 的系统镜像来执行本文件中配置的脚本
 language: scala
+scala:
+    - 2.11.8
 
 # 应执行 sbt test 任务来进行自动测试
 script:
