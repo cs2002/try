@@ -19,7 +19,7 @@ script:
     # condition: -e ./deploy.sbt
     # all_branches: true
 before_deploy:
-  - sbt compile
+  - echo "wwwwwwwwwwwwwwwwwwwwwwwwwwwwww"
 
 deploy:
     provider: releases
@@ -27,5 +27,5 @@ deploy:
     api_key: $TOKEN
     file: "build.sbt"
     skip_cleanup: true
-    # on:
-        # tags: true
+    on:
+        tags: true
