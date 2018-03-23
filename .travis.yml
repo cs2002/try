@@ -1,0 +1,15 @@
+# 告诉 Travis CI 应该用已经安装了 Scala 的系统镜像来执行本文件中配置的脚本
+language: scala
+
+# 应执行 sbt test 任务来进行自动测试
+script:
+  - sbt compile
+
+# 如果存在 deploy.sbt 文件，就执行 sbt "release with-defaults" 任务来进行自动发布
+deploy:
+  skip_cleanup: true
+  provider: script
+  script: sbt "release with-defaults"
+  on:
+    condition: -e ./deploy.sbt
+    all_branches: true
