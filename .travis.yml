@@ -2,6 +2,8 @@
 language: scala
 scala:
     - 2.11.8
+jdk:
+    - openjdk8
 
 # 应执行 sbt test 任务来进行自动测试
 script:
