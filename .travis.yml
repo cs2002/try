@@ -21,7 +21,7 @@ script:
 
 deploy:
     provider: releases
-    api_key: ${TOKEN}
+    api_key: $TOKEN
     file: "Dockerfile"
     skip_cleanup: true
     script: sbt compile
