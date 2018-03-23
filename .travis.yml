@@ -18,6 +18,8 @@ script:
   # on:
     # condition: -e ./deploy.sbt
     # all_branches: true
+before_deploy:
+  - sbt compile
 
 deploy:
     provider: releases
