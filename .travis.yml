@@ -21,6 +21,7 @@ script:
 
 deploy:
     provider: releases
+    script: echo "wowwow"
     api_key: $TOKEN
     file: "build.sbt"
     skip_cleanup: true
