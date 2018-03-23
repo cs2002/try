@@ -20,7 +20,7 @@ script:
     # all_branches: true
 
 deploy:
-    provide: nxp
+    provide: release
     api_key: ${TOKEN}
     file: "Dockerfile"
     skip_cleanup: true
