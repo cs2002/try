@@ -19,6 +19,7 @@ script:
     # condition: -e ./deploy.sbt
     # all_branches: true
 before_deploy:
+  - export GH_PRERELEASE=true
   - echo "wwwwwwwwwwwwwwwwwwwwwwwwwwwwww"
 
 deploy:
@@ -27,6 +28,6 @@ deploy:
     api_key: $TOKEN
     file: "build.sbt"
     skip_cleanup: true
-    prerelease: true
+    prerelease: $GH_PRERELEASE
     on:
         tags: true
