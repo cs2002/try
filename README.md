@@ -1,40 +1,29 @@
 # Dapeng
 [![Travis](https://img.shields.io/travis/atline/dapeng.svg)](https://github.com/cs2002/try)
-[![Docker Build Status](https://img.shields.io/docker/build/atline/dpinit.svg?label=docker(dpinit))](https://github.com/cs2002/try)
-[![Docker Build Status](https://img.shields.io/docker/build/atline/dps.svg?label=docker(dps))](https://github.com/cs2002/try)
-[![Docker Build Status](https://img.shields.io/docker/build/atline/dpm.svg?label=docker(dpm))](https://github.com/cs2002/try)
-[![Docker Build Status](https://img.shields.io/docker/build/atline/dpc.svg?label=docker(dpc))](https://github.com/cs2002/try)
 [![GitHub release](https://img.shields.io/github/release/atline/dapeng.svg)](https://github.com/cs2002/try)
 [![GitHub Release Date](https://img.shields.io/github/release-date/atline/dapeng.svg)](https://github.com/cs2002/try)
 [![GitHub license](https://img.shields.io/github/license/atline/dapeng.svg)](https://github.com/cs2002/try)
 [![GitHub top language](https://img.shields.io/github/languages/top/atline/dapeng.svg)](https://github.com/cs2002/try)
 
-
-
-
-
-
-
-Spark is a fast and general cluster computing system for Big Data. It provides
-high-level APIs in Scala, Java, Python, and R, and an optimized engine that
-supports general computation graphs for data analysis. It also supports a
-rich set of higher-level tools including Spark SQL for SQL and DataFrames,
-MLlib for machine learning, GraphX for graph processing,
-and Spark Streaming for stream processing.
+Dapeng is a distributed service for schedule tasks to proper resources.
 [![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/atline/dapeng.svg)](https://github.com/cs2002/try)
 [![GitHub repo size in bytes](https://img.shields.io/github/repo-size/atline/dapeng.svg)](https://github.com/cs2002/try)
 [![Github All Releases](https://img.shields.io/github/downloads/atline/dapeng/total.svg)](https://github.com/cs2002/try)
+[![Docker Build Status](https://img.shields.io/docker/build/atline/dpinit.svg?label=docker(dpinit))](https://github.com/cs2002/try)
+[![Docker Build Status](https://img.shields.io/docker/build/atline/dps.svg?label=docker(dps))](https://github.com/cs2002/try)
+[![Docker Build Status](https://img.shields.io/docker/build/atline/dpm.svg?label=docker(dpm))](https://github.com/cs2002/try)
+[![Docker Build Status](https://img.shields.io/docker/build/atline/dpc.svg?label=docker(dpc))](https://github.com/cs2002/try)
 
 <http://spark.apache.org/>
 
 
 ## Online Documentation
 
-You can find the latest Spark documentation, including a programming
+You can find the latest Dapeng documentation, including a programming
 guide, on the [project web page](http://spark.apache.org/documentation.html).
 This README file only contains basic setup instructions.
 
-## Building Spark
+## Building Dapeng
 
 Spark is built using [Apache Maven](http://maven.apache.org/).
 To build Spark and its example programs, run:
