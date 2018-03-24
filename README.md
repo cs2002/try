@@ -5,6 +5,10 @@
 [![GitHub Release Date](https://img.shields.io/github/release-date/cs2002/try.svg)](https://github.com/cs2002/try)
 [![GitHub top language](https://img.shields.io/github/languages/top/cs2002/try.svg)](https://github.com/cs2002/try)
 [![Docker Build Status](https://img.shields.io/docker/build/cs2002/try.svg)](https://github.com/cs2002/try)
+[![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/cs2002/try.svg)](https://github.com/cs2002/try)
+[![GitHub repo size in bytes](https://img.shields.io/github/repo-size/cs2002/try.svg)](https://github.com/cs2002/try)
+
+
 
 
 
