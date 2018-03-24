@@ -4,9 +4,11 @@
 [![GitHub release](https://img.shields.io/github/release/cs2002/try.svg)](https://github.com/cs2002/try)
 [![GitHub Release Date](https://img.shields.io/github/release-date/cs2002/try.svg)](https://github.com/cs2002/try)
 [![GitHub top language](https://img.shields.io/github/languages/top/cs2002/try.svg)](https://github.com/cs2002/try)
-[![Docker Build Status](https://img.shields.io/docker/build/cs2002/try.svg)](https://github.com/cs2002/try)
+[![Docker Build Status](https://img.shields.io/docker/build/atline/dpinit.svg)](https://github.com/cs2002/try)
 [![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/cs2002/try.svg)](https://github.com/cs2002/try)
 [![GitHub repo size in bytes](https://img.shields.io/github/repo-size/cs2002/try.svg)](https://github.com/cs2002/try)
+[![Github All Releases](https://img.shields.io/github/downloads/cs2002/try/total.svg)](https://github.com/cs2002/try)
+
 
 
 
