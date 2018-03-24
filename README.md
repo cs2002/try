@@ -1,5 +1,5 @@
 # Dapeng
-[![Build Status](https://travis-ci.org/cs2002/try.svg?branch=master)](https://travis-ci.org/cs2002/try)
+[![Travis](https://img.shields.io/travis/cs2002/try.svg)](https://github.com/cs2002/try)
 [![GitHub license](https://img.shields.io/github/license/cs2002/try.svg)](https://github.com/cs2002/try)
 [![GitHub release](https://img.shields.io/github/release/cs2002/try.svg)](https://github.com/cs2002/try)
 [![GitHub Release Date](https://img.shields.io/github/release-date/cs2002/try.svg)](https://github.com/cs2002/try)
