@@ -1,5 +1,8 @@
 # Dapeng [![Build Status](https://travis-ci.org/cs2002/try.svg?branch=master)](https://travis-ci.org/cs2002/try)
 
+[![GitHub license](https://img.shields.io/github/license/cs2002/try.svg)](https://github.com/cs2002/try)
+
+
 Spark is a fast and general cluster computing system for Big Data. It provides
 high-level APIs in Scala, Java, Python, and R, and an optimized engine that
 supports general computation graphs for data analysis. It also supports a
