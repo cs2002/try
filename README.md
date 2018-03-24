@@ -3,7 +3,7 @@
 [![GitHub license](https://img.shields.io/github/license/cs2002/try.svg)](https://github.com/cs2002/try)
 [![GitHub release](https://img.shields.io/github/release/cs2002/try.svg)](https://github.com/cs2002/try)
 [![GitHub Release Date](https://img.shields.io/github/release-date/cs2002/try.svg)](https://github.com/cs2002/try)
-
+[![GitHub top language](https://img.shields.io/github/languages/top/cs2002/try.svg)](https://github.com/cs2002/try)
 
 
 
