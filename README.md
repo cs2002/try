@@ -21,11 +21,39 @@ To build Dapeng, run:
 
     sbt distclean release
 
+You can also use docker image to build dapeng:
+
+    docker --rm -v /path/to/build.sbt:/dpsrc atline/dpbuild
+
 ## Install Dapeng
+
+### System Requirements
+
+##### Hardware Prerequisites
+
+> Processor >= 4 cores
+
+> Memory >= 8 GB RAM
+
+> Hard disk >= 120 GB
+
+##### Software Prerequisite
+
+> OS: Linux distribution, 64 bits
+
+> Kernel Version >= 3.10
+
+> Docker: Enabled
+
+> SSH: Enabled
+
+**NOTE**: You can use `curl -fsSL get.docker.com -o get-docker.sh | sh` to install docker or visit [docker offical website](https://docs.docker.com/install/linux/docker-ce/ubuntu/) to get the latest guide.
+
+### Boot Script
 
 User can use boot script to install/configure/start dapeng base on the component choise.
 
-(You can use curl -O to get the `dp.init`. If not accessable, you can also get it from sourcecode of dapeng, located in `docker/script/dp.init`)
+(You can use curl -O to get the `dp.init`. If not accessable, you can also get it from sourcecode of dapeng, located at `docker/script/dp.init`)
 
 Boot script command usage:
 
@@ -43,7 +71,7 @@ NOTE: `dp.init` internal use `dpinit` to install/configure/start dapeng componen
 It supports 3 kinds of component, user can install all components on one server. Of course, also can install them on different servers for different aims.
 
 
-### dps
+#### dps
 
 [![Docker Build Status](https://img.shields.io/docker/build/atline/dps.svg?label=docker(dps))](https://hub.docker.com/r/atline/dps/builds/)
 
@@ -53,7 +81,7 @@ This component is for dapeng scheduler server, it affords resource router servic
     dp.init -c dps --configure #  reconfigure dps
     dp.init -c dps --start #  start dps if not auto start it in install
 
-### dpm
+#### dpm
 [![Docker Build Status](https://img.shields.io/docker/build/atline/dpm.svg?label=docker(dpm))](https://hub.docker.com/r/atline/dpm/builds/)
 [![Docker Build Status](https://img.shields.io/docker/build/atline/dpmbase.svg?label=docker(dpmbase))](https://hub.docker.com/r/atline/dpmbase/builds/)
 
@@ -63,7 +91,7 @@ This component is for dapeng mesos framework, it affords the adapter between mes
     dp.init -c dpm --configure #  reconfigure dpm
     dp.init -c dpm --start #  start dpm if not auto start it in install
 
-### dpc
+#### dpc
 [![Docker Build Status](https://img.shields.io/docker/build/atline/dpc.svg?label=docker(dpc))](https://hub.docker.com/r/atline/dpc/builds/)
 
 This component is for dapeng client, it affords interface for user application to use dapeng scheduler service, meanwhile, also afford path for scheduler to call user application.
@@ -72,23 +100,10 @@ This component is for dapeng client, it affords interface for user application t
     dp.init -c dpc --configure #  reconfigure dpc
     dp.init -c dpc --start #  start dpc if not auto start it in install
 
-## User script
+## Dapeng User Script
 
 After install dapeng component, user can use `dp` command to interfact with dapeng.
 
 The easiest way to start using Spark is through the Scala shell:
 
     dp xxx
-
-## A Note About Cassandra
-
-Spark uses the Hadoop core library to talk to HDFS and other Hadoop-supported
-storage systems. Because the protocols have changed in different versions of
-Hadoop, you must build Spark against the same version that your cluster runs.
-
-Please refer to the build documentation at
-["Specifying the Hadoop Version"](http://spark.apache.org/docs/latest/building-spark.html#specifying-the-hadoop-version)
-for detailed guidance on building for a particular distribution of Hadoop, including
-building for particular Hive and Hive Thriftserver distributions.
-
-
