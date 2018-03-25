@@ -2,16 +2,16 @@
 
 [![Travis](https://img.shields.io/travis/atline/dapeng.svg)](https://travis-ci.org/atline/dapeng/)
 [![GitHub release](https://img.shields.io/github/release/atline/dapeng.svg)](#)
-[![GitHub Release Date](https://img.shields.io/github/release-date/atline/dapeng.svg)]()
-[![GitHub license](https://img.shields.io/github/license/atline/dapeng.svg)]()
-[![GitHub top language](https://img.shields.io/github/languages/top/atline/dapeng.svg)]()
+[![GitHub Release Date](https://img.shields.io/github/release-date/atline/dapeng.svg)](#)
+[![GitHub license](https://img.shields.io/github/license/atline/dapeng.svg)](#)
+[![GitHub top language](https://img.shields.io/github/languages/top/atline/dapeng.svg)](#)
 
 Dapeng is a distributed scheduler service aims to dispatch tasks to proper resources.
 
 ## Online Documentation
 
 You can find the latest Dapeng documentation, including a programming
-guide, on the [project web page]().
+guide, on the [project web page](#).
 This README file only contains basic setup instructions.
 
 ## Build Dapeng
