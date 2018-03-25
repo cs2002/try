@@ -102,8 +102,6 @@ This component is for dapeng client, it affords interface for user application t
 
 ## Dapeng User Script
 
-After install dapeng component, user can use `dp` command to interfact with dapeng.
-
-The easiest way to start using Spark is through the Scala shell:
+After install dapeng component, user can use `dp` command to interact with dapeng.
 
     $ dp xxx
