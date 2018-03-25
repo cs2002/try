@@ -1,7 +1,7 @@
 # Dapeng
 
 [![Travis](https://img.shields.io/travis/atline/dapeng.svg)](https://travis-ci.org/atline/dapeng/)
-[![GitHub release](https://img.shields.io/github/release/atline/dapeng.svg)]()
+[![GitHub release](https://img.shields.io/github/release/atline/dapeng.svg)](#)
 [![GitHub Release Date](https://img.shields.io/github/release-date/atline/dapeng.svg)]()
 [![GitHub license](https://img.shields.io/github/license/atline/dapeng.svg)]()
 [![GitHub top language](https://img.shields.io/github/languages/top/atline/dapeng.svg)]()
