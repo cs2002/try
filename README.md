@@ -100,7 +100,7 @@ This component is for dapeng client, it affords interface for user application t
     $ dp.init -c dpc --configure #  reconfigure dpc
     $ dp.init -c dpc --start #  start dpc if not auto start it in install
 
-## Dapeng User Script
+## User Script
 
 After install dapeng component, user can use `dp` command to interact with dapeng.
 
