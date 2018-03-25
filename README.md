@@ -60,8 +60,8 @@ Boot script command usage:
     $ dp.init -c $component --install #  install specified component to your server
     $ dp.init -c $component --configure #  reconfigure specified component
     $ dp.init -c $component --start #  start specified component if not auto start it in install
-    NOTE: --start just be used after you install or configure component without choose component auto start.
-          In fact, no need to use it in normal case as component will automatically start when server restart.
+      NOTE: --start just be used after you install or configure component without choose component auto start.
+            In fact, no need to use it in normal case as component will automatically start when server restart.
 
 NOTE: `dp.init` internal use `dpinit` to install/configure/start dapeng components:
 
