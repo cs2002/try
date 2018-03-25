@@ -1,94 +1,86 @@
 # Dapeng
-[![Travis](https://img.shields.io/travis/atline/dapeng.svg)](https://github.com/cs2002/try)
-[![GitHub release](https://img.shields.io/github/release/atline/dapeng.svg)](https://github.com/cs2002/try)
-[![GitHub Release Date](https://img.shields.io/github/release-date/atline/dapeng.svg)](https://github.com/cs2002/try)
-[![GitHub license](https://img.shields.io/github/license/atline/dapeng.svg)](https://github.com/cs2002/try)
-[![GitHub top language](https://img.shields.io/github/languages/top/atline/dapeng.svg)](https://github.com/cs2002/try)
 
-Dapeng is a distributed service for schedule tasks to proper resources.
-[![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/atline/dapeng.svg)](https://github.com/cs2002/try)
-[![GitHub repo size in bytes](https://img.shields.io/github/repo-size/atline/dapeng.svg)](https://github.com/cs2002/try)
-[![Github All Releases](https://img.shields.io/github/downloads/atline/dapeng/total.svg)](https://github.com/cs2002/try)
-[![Docker Build Status](https://img.shields.io/docker/build/atline/dpinit.svg?label=docker(dpinit))](https://github.com/cs2002/try)
-[![Docker Build Status](https://img.shields.io/docker/build/atline/dps.svg?label=docker(dps))](https://github.com/cs2002/try)
-[![Docker Build Status](https://img.shields.io/docker/build/atline/dpm.svg?label=docker(dpm))](https://github.com/cs2002/try)
-[![Docker Build Status](https://img.shields.io/docker/build/atline/dpc.svg?label=docker(dpc))](https://github.com/cs2002/try)
+[![Travis](https://img.shields.io/travis/atline/dapeng.svg)](https://travis-ci.org/atline/dapeng/)
+[![GitHub release](https://img.shields.io/github/release/atline/dapeng.svg)]()
+[![GitHub Release Date](https://img.shields.io/github/release-date/atline/dapeng.svg)]()
+[![GitHub license](https://img.shields.io/github/license/atline/dapeng.svg)]()
+[![GitHub top language](https://img.shields.io/github/languages/top/atline/dapeng.svg)]()
 
-<http://spark.apache.org/>
-
+Dapeng is a distributed scheduler service aims to dispatch tasks to proper resources.
 
 ## Online Documentation
 
 You can find the latest Dapeng documentation, including a programming
-guide, on the [project web page](http://spark.apache.org/documentation.html).
+guide, on the [project web page]().
 This README file only contains basic setup instructions.
 
-## Building Dapeng
+## Build Dapeng
 
-Spark is built using [Apache Maven](http://maven.apache.org/).
-To build Spark and its example programs, run:
+Dapeng is built using [Sbt](https://www.scala-sbt.org/).
+To build Dapeng, run:
 
-    build/mvn -DskipTests clean package
+    sbt distclean release
 
-(You do not need to do this if you downloaded a pre-built package.)
+## Install Dapeng
 
-You can build Spark using more than one thread by using the -T option with Maven, see ["Parallel builds in Maven 3"](https://cwiki.apache.org/confluence/display/MAVEN/Parallel+builds+in+Maven+3).
-More detailed documentation is available from the project site, at
-["Building Spark"](http://spark.apache.org/docs/latest/building-spark.html).
+User can use boot script to install/configure/start dapeng base on the component choise.
 
-For general development tips, including info on developing Spark using an IDE, see ["Useful Developer Tools"](http://spark.apache.org/developer-tools.html).
+(You can use curl -O to get the `dp.init`. If not accessable, you can also get it from sourcecode of dapeng, located in `docker/script/dp.init`)
 
-## Interactive Scala Shell
+Boot script command usage:
+
+    dp.init -c $component --install #  install specified component to your server
+    dp.init -c $component --configure #  reconfigure specified component
+    dp.init -c $component --start #  start specified component if not auto start it in install
+    NOTE: --start just be used after you install or configure component without choose component auto start.
+          In fact, no need to use it in normal case as component will automatically start when server restart.
+
+NOTE: `dp.init` internal use `dpinit` to install/configure/start dapeng components:
+
+[![Docker Build Status](https://img.shields.io/docker/build/atline/dpinit.svg?label=docker(dpinit))](https://hub.docker.com/r/atline/dpinit/builds/)
+[![Docker Build Status](https://img.shields.io/docker/build/atline/dpinitbase.svg?label=docker(dpinitbase))](https://hub.docker.com/r/atline/dpinitbase/builds/)
+
+It supports 3 kinds of component, user can install all components on one server. Of course, also can install them on different servers for different aims.
+
+
+### dps
+
+[![Docker Build Status](https://img.shields.io/docker/build/atline/dps.svg?label=docker(dps))](https://hub.docker.com/r/atline/dps/builds/)
+
+This component is for dapeng scheduler server, it affords resource router service for user request.
+
+    dp.init -c dps --install #  install dps to your server
+    dp.init -c dps --configure #  reconfigure dps
+    dp.init -c dps --start #  start dps if not auto start it in install
+
+### dpm
+[![Docker Build Status](https://img.shields.io/docker/build/atline/dpm.svg?label=docker(dpm))](https://hub.docker.com/r/atline/dpm/builds/)
+[![Docker Build Status](https://img.shields.io/docker/build/atline/dpmbase.svg?label=docker(dpmbase))](https://hub.docker.com/r/atline/dpmbase/builds/)
+
+This component is for dapeng mesos framework, it affords the adapter between mesos & dapeng scheduler.
+
+    dp.init -c dpm --install #  install dpm to your server
+    dp.init -c dpm --configure #  reconfigure dpm
+    dp.init -c dpm --start #  start dpm if not auto start it in install
+
+### dpc
+[![Docker Build Status](https://img.shields.io/docker/build/atline/dpc.svg?label=docker(dpc))](https://hub.docker.com/r/atline/dpc/builds/)
+
+This component is for dapeng client, it affords interface for user application to use dapeng scheduler service, meanwhile, also afford path for scheduler to call user application.
+
+    dp.init -c dpc --install #  install dpc to your server
+    dp.init -c dpc --configure #  reconfigure dpc
+    dp.init -c dpc --start #  start dpc if not auto start it in install
+
+## User script
+
+After install dapeng component, user can use `dp` command to interfact with dapeng.
 
 The easiest way to start using Spark is through the Scala shell:
 
-    ./bin/spark-shell
+    dp xxx
 
-Try the following command, which should return 1000:
-
-    scala> sc.parallelize(1 to 1000).count()
-
-## Interactive Python Shell
-
-Alternatively, if you prefer Python, you can use the Python shell:
-
-    ./bin/pyspark
-
-And run the following command, which should also return 1000:
-
-    >>> sc.parallelize(range(1000)).count()
-
-## Example Programs
-
-Spark also comes with several sample programs in the `examples` directory.
-To run one of them, use `./bin/run-example <class> [params]`. For example:
-
-    ./bin/run-example SparkPi
-
-will run the Pi example locally.
-
-You can set the MASTER environment variable when running examples to submit
-examples to a cluster. This can be a mesos:// or spark:// URL,
-"yarn" to run on YARN, and "local" to run
-locally with one thread, or "local[N]" to run locally with N threads. You
-can also use an abbreviated class name if the class is in the `examples`
-package. For instance:
-
-    MASTER=spark://host:7077 ./bin/run-example SparkPi
-
-Many of the example programs print usage help if no params are given.
-
-## Running Tests
-
-Testing first requires [building Spark](#building-spark). Once Spark is built, tests
-can be run using:
-
-    ./dev/run-tests
-
-Please see the guidance on how to
-[run tests for a module, or individual tests](http://spark.apache.org/developer-tools.html#individual-tests).
-
-## A Note About Hadoop Versions
+## A Note About Cassandra
 
 Spark uses the Hadoop core library to talk to HDFS and other Hadoop-supported
 storage systems. Because the protocols have changed in different versions of
@@ -98,15 +90,5 @@ Please refer to the build documentation at
 ["Specifying the Hadoop Version"](http://spark.apache.org/docs/latest/building-spark.html#specifying-the-hadoop-version)
 for detailed guidance on building for a particular distribution of Hadoop, including
 building for particular Hive and Hive Thriftserver distributions.
-
-## Configuration
-
-Please refer to the [Configuration Guide](http://spark.apache.org/docs/latest/configuration.html)
-in the online documentation for an overview on how to configure Spark.
-
-## Contributing
-
-Please review the [Contribution to Spark guide](http://spark.apache.org/contributing.html)
-for information on how to get started contributing to the project.
 
 
