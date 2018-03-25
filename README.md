@@ -57,9 +57,9 @@ User can use boot script to install/configure/start dapeng base on the component
 
 Boot script command usage:
 
-    dp.init -c $component --install #  install specified component to your server
-    dp.init -c $component --configure #  reconfigure specified component
-    dp.init -c $component --start #  start specified component if not auto start it in install
+    $ dp.init -c $component --install #  install specified component to your server
+    $ dp.init -c $component --configure #  reconfigure specified component
+    $ dp.init -c $component --start #  start specified component if not auto start it in install
     NOTE: --start just be used after you install or configure component without choose component auto start.
           In fact, no need to use it in normal case as component will automatically start when server restart.
 
@@ -77,9 +77,9 @@ It supports 3 kinds of component, user can install all components on one server.
 
 This component is for dapeng scheduler server, it affords resource router service for user request.
 
-    dp.init -c dps --install #  install dps to your server
-    dp.init -c dps --configure #  reconfigure dps
-    dp.init -c dps --start #  start dps if not auto start it in install
+    $ dp.init -c dps --install #  install dps to your server
+    $ dp.init -c dps --configure #  reconfigure dps
+    $ dp.init -c dps --start #  start dps if not auto start it in install
 
 #### dpm
 [![Docker Build Status](https://img.shields.io/docker/build/atline/dpm.svg?label=docker(dpm))](https://hub.docker.com/r/atline/dpm/builds/)
@@ -87,18 +87,18 @@ This component is for dapeng scheduler server, it affords resource router servic
 
 This component is for dapeng mesos framework, it affords the adapter between mesos & dapeng scheduler.
 
-    dp.init -c dpm --install #  install dpm to your server
-    dp.init -c dpm --configure #  reconfigure dpm
-    dp.init -c dpm --start #  start dpm if not auto start it in install
+    $ dp.init -c dpm --install #  install dpm to your server
+    $ dp.init -c dpm --configure #  reconfigure dpm
+    $ dp.init -c dpm --start #  start dpm if not auto start it in install
 
 #### dpc
 [![Docker Build Status](https://img.shields.io/docker/build/atline/dpc.svg?label=docker(dpc))](https://hub.docker.com/r/atline/dpc/builds/)
 
 This component is for dapeng client, it affords interface for user application to use dapeng scheduler service, meanwhile, also afford path for scheduler to call user application.
 
-    dp.init -c dpc --install #  install dpc to your server
-    dp.init -c dpc --configure #  reconfigure dpc
-    dp.init -c dpc --start #  start dpc if not auto start it in install
+    $ dp.init -c dpc --install #  install dpc to your server
+    $ dp.init -c dpc --configure #  reconfigure dpc
+    $ dp.init -c dpc --start #  start dpc if not auto start it in install
 
 ## Dapeng User Script
 
@@ -106,4 +106,4 @@ After install dapeng component, user can use `dp` command to interfact with dape
 
 The easiest way to start using Spark is through the Scala shell:
 
-    dp xxx
+    $ dp xxx
