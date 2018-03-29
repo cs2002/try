@@ -8,13 +8,14 @@
 
 Dapeng is a distributed scheduler service aims to dispatch tasks to proper resources.
 
-
+<br />
 ## Online Documentation
 
 You can find the latest Dapeng documentation on the [project web page](#)[TODO].<br />
 This README file only contains basic setup instructions.
 
 
+<br />
 ## Build Dapeng
 
 Dapeng is built using [Sbt](https://www.scala-sbt.org/).
@@ -30,6 +31,7 @@ You can also use `dpbuild docker image` to build dapeng:
     docker run --rm -v /path/to/dapeng_repo:/dpsrc atline/dpbuild
 
 
+<br />
 ## Install Dapeng
 
 ### 1. System Requirements
@@ -128,6 +130,7 @@ This component is for dapeng client, it affords interface for user application t
     $ dp.init -c dpc --configure #  reconfigure dpc
     $ dp.init -c dpc --start #  start dpc if not auto start it in install
 
+<br />
 ## User Script
 
 After install dapeng component, user can use `dp` command to interact with dapeng.
