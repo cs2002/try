@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="SBT: io.kamon:kamon-core_2.10:0.6.0:jar">
+    <CLASSES>
+      <root url="jar://E:/data/.ivy2/cache/io.kamon/kamon-core_2.10/jars/kamon-core_2.10-0.6.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://E:/data/.ivy2/cache/io.kamon/kamon-core_2.10/srcs/kamon-core_2.10-0.6.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
